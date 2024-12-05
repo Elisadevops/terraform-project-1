@@ -4,7 +4,7 @@ region = "ap-southeast-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0f935a2ecd3a7bd5c"
   instance_type   = "t2.micro"
   key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -23,7 +23,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0f935a2ecd3a7bd5c"
   instance_type   = "t2.micro"
   key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -42,7 +42,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0f935a2ecd3a7bd5c"
   instance_type   = "t2.micro"
   key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -53,7 +53,7 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-06018068a18569ff2"
+  ami             = "ami-0f935a2ecd3a7bd5c"
   instance_type   = "t2.micro"
   key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -64,7 +64,7 @@ resource "aws_instance" "four" {
 }
 
 resource "aws_security_group" "five" {
-  name = "elb-abc"
+  name = "elb-abcdef"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -88,7 +88,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "projectbypinkyterraserverbucket777oo777yhwh777yhwh777"
+  bucket = "projectbypinky777terraserverbucket777oo777yhwh777yyy777"
 }
 
 resource "aws_iam_user" "seven" {
@@ -99,13 +99,13 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["peer1", "peer2", "peer3", "peer4"]
+default = ["per1", "per2", "per3", "per4"]
 }
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-southeast-1a"
   size = 40
   tags = {
-    Name = "ebs-abc777"
+    Name = "ebs-abcdef777"
   }
 }
