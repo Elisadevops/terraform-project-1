@@ -6,7 +6,7 @@ region = "ap-southeast-1"
 resource "aws_instance" "one" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
   user_data       = <<EOF
@@ -15,7 +15,7 @@ sudo -i
 yum install httpd -y
 systemctl start httpd
 chkconfig httpd on
-echo "hai all this is my app created by terraform infrastructurte by raham sir server-1" > /var/www/html/index.html
+echo "hai all this is my app created by terraform infrastructurte by pinky server-1" > /var/www/html/index.html
 EOF
   tags = {
     Name = "web-server-1"
@@ -25,7 +25,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
   user_data       = <<EOF
@@ -44,7 +44,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
   tags = {
@@ -55,7 +55,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "pinkyproj"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
   tags = {
@@ -88,7 +88,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "devopsbyrahamterraserverbucket9988oo9988"
+  bucket = "projectbypinkyterraserverbucket777oo777YHWH777"
 }
 
 resource "aws_iam_user" "seven" {
@@ -99,13 +99,13 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["user1", "user2", "user3", "user4"]
+default = ["peer1", "peer2", "peer3", "peer4"]
 }
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-southeast-1a"
   size = 40
   tags = {
-    Name = "ebs-001"
+    Name = "ebs-777"
   }
 }
