@@ -88,7 +88,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "projectbypinkyterraserverbucket777oo777YHWH777"
+  bucket = "projectbypinkyterraserverbucket777oo777yhwh777yhwh777"
 }
 
 resource "aws_iam_user" "seven" {
